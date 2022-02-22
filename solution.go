@@ -6,6 +6,10 @@ import (
 
 type intCustomType int
 
+const SidesCircle = intCustomType(0)
+const SidesTriangle = intCustomType(3)
+const SidesSquare = intCustomType(4)
+
 func CalcSquare(sideLen float64, sidesNum intCustomType) float64 {
 	var result float64
 

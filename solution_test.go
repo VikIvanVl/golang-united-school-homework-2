@@ -22,7 +22,7 @@ func Test_solutionSquare(t *testing.T) {
 		{In: 15.67, Expected: 245.5489},
 	}
 	for _, q := range data {
-		got := CalcSquare(q.In, intCustomType(4))
+		got := CalcSquare(q.In, SidesSquare)
 		if !equalDeltaFloat64(got, q.Expected, deltaTesting) {
 			t.Logf("Square4 expected: %f, got: %f", q.Expected, got)
 			t.Fail()
@@ -41,7 +41,7 @@ func Test_solutionTriangle(t *testing.T) {
 		{In: 15.67, Expected: 106.325793},
 	}
 	for _, q := range data {
-		got := CalcSquare(q.In, intCustomType(3))
+		got := CalcSquare(q.In, SidesTriangle)
 		if !equalDeltaFloat64(got, q.Expected, deltaTesting) {
 			t.Logf("Square4 expected: %f, got: %f", q.Expected, got)
 			t.Fail()
@@ -60,7 +60,7 @@ func Test_solutionCircle(t *testing.T) {
 		{In: 15.67, Expected: 771.414620},
 	}
 	for _, q := range data {
-		got := CalcSquare(q.In, intCustomType(0))
+		got := CalcSquare(q.In, SidesCircle)
 		if !equalDeltaFloat64(got, q.Expected, deltaTesting) {
 			t.Logf("Square0 expected: %f, got: %f", q.Expected, got)
 			t.Fail()
